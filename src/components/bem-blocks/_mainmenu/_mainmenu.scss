@@ -1,0 +1,23 @@
+.mainnav{
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 4 / 13;
+  grid-row: 2 / 3;
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 100%;
+    gap: 0 10px;
+  }
+  &__item{
+    text-align: center;
+  }
+  &__link{
+    max-width: 150px;
+  }
+  &__burger{
+    display: none;
+    margin-left: -10px;
+  }
+}

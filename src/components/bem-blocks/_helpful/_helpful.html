@@ -1,0 +1,26 @@
+<section class="section helpful">
+  <div class="container">
+    <div class="swiper helpful__slider">
+      <div class="helpful__top slider-top">
+        <h3 class="section__title helpful__title h3">
+          Полезное
+        </h3>
+        <div class="swiper-navigation slider-nav helpful__navigation" data-da=".helpful__slider,480,3">
+          <button class="btn btn-circle btn-circle--prev" aria-label="Предыдущие товары">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+          <button class="btn btn-circle btn-circle--next" aria-label="Следующие товары">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="swiper-wrapper helpful__wrapper">
+        @@loop('_helpful-card.html', 'components/bem-blocks/_helpful/_helpful.json')
+      </div>
+    </div>
+  </div>
+</section>

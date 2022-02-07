@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Диваны",
+    "top-links": {
+      "link1": {
+        "name": "Прямые",
+        "link": "#"
+      },
+      "link2": {
+        "name": "Угловые",
+        "link": "#"
+      },
+      "link3": {
+        "name": "Модульные",
+        "link": "#"
+      }
+    },
+    "btn-link": "#",
+    "imgsrc": "img/category/category-sofa",
+    "btn-text": "В каталог",
+    "class": "big",
+    "number": "1"
+  },
+  {
+    "name": "Кресла",
+    "top-links": {
+      "link1": {
+        "name": "Мягкие",
+        "link": "#"
+      },
+      "link2": {
+        "name": "Кресла-кровати",
+        "link": "#"
+      },
+      "link3": {
+        "name": "",
+        "link": ""
+      }
+    },
+    "btn-link": "#",
+    "imgsrc": "img/category/category-armchair",
+    "btn-text": "В каталог",
+    "class": "big",
+    "number": "2"
+  },
+  {
+    "name": "Кровати",
+    "top-links": {
+      "link1": {
+        "name": "Односпальные",
+        "link": "#"
+      },
+      "link2": {
+        "name": "Двуспальные",
+        "link": "#"
+      },
+      "link3": {
+        "name": "",
+        "link": ""
+      }
+    },
+    "btn-link": "#",
+    "imgsrc": "img/category/category-bed",
+    "btn-text": "В каталог",
+    "class": "mini",
+    "number": "1"
+  },
+  {
+    "name": "Тумбы и комоды",
+    "top-links": {
+      "link1": {
+        "name": "Тумбы",
+        "link": "#"
+      },
+      "link2": {
+        "name": "Комоды",
+        "link": "#"
+      },
+      "link3": {
+        "name": "",
+        "link": ""
+      }
+    },
+    "btn-link": "#",
+    "imgsrc": "img/category/category-chest",
+    "btn-text": "В каталог",
+    "class": "mini",
+    "number": "2"
+  },
+  {
+    "name": "Стулья",
+    "top-links": {
+      "link1": {
+        "name": "Деревянные",
+        "link": "#"
+      },
+      "link2": {
+        "name": "Металлокаркас",
+        "link": "#"
+      },
+      "link3": {
+        "name": "",
+        "link": ""
+      }
+    },
+    "btn-link": "#",
+    "imgsrc": "img/category/category-chair",
+    "btn-text": "В каталог",
+    "class": "mini",
+    "number": "3"
+  }
+]

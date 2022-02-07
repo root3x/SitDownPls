@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Кресло велюровое",
+    "model": "“X-24”",
+    "price-new": "15 990",
+    "price-old":  "24 990",
+    "discount": "9000",
+    "imgsrc": "img/category/armchair/x-24",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "mini"
+  },
+  {
+    "name": "Диван тканевый",
+    "model": "“Z-44”",
+    "price-new": "22 990",
+    "price-old":  "32 990",
+    "discount": "10000",
+    "imgsrc": "img/category/sofa/z-44",
+    "imgsrc-bone": "img/category/sofa/z-44-bone-1.png",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "big"
+  },
+  {
+    "name": "Будильник",
+    "model": "“Quartz-23”",
+    "price-new": "1 290",
+    "price-old":  "1 890",
+    "discount": "600",
+    "imgsrc": "img/category/accessories/Quartz-23",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "mini"
+  },
+  {
+    "name": "Мини-скульптура",
+    "model": "“Oh my deer”",
+    "price-new": "690",
+    "price-old":  "990",
+    "discount": "300",
+    "imgsrc": "img/category/accessories/dear",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "mini"
+  },
+  {
+    "name": "Диван вел-флок",
+    "model": "“Z-85”",
+    "price-new": "22 990",
+    "price-old":  "32 990",
+    "discount": "10000",
+    "imgsrc": "img/category/sofa/z-85",
+    "imgsrc-bone": "img/category/sofa/z-85-bone-1.png",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "big"
+  },
+  {
+    "name": "Термометр + гидрометр “H-18”",
+    "model": "",
+    "price-new": "1 390",
+    "price-old":  "2 090",
+    "discount": "700",
+    "imgsrc": "img/category/accessories/h-18",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "buy-text": "Купить",
+    "size": "mini"
+  }
+]

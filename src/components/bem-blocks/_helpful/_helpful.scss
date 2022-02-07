@@ -1,0 +1,77 @@
+.helpful{
+  &__title{
+    margin-bottom: 0;
+  }
+  &__slide{
+    justify-content: flex-start;
+    min-height: 676px;
+    height: auto;
+    padding-top: 438px;
+    overflow: hidden;
+  }
+  &__btn{
+    margin-top: auto;
+  }
+  .picture{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 426px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      @include transit;
+    }
+  }
+  &__cardlink{
+    @media screen and (min-width: 992px) {
+      &:hover{
+        .picture{
+          img{
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    &:focus-visible{
+      .picture{
+        outline: 1px solid rgba($primary, 10);
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .helpful{
+    &__slide{
+      min-height: 456px;
+      padding-top: 202px;
+    }
+    &__text{
+      font-size: 16px;
+      line-height: 22 / 16 * 100%;
+    }
+    .picture{
+      height: 202px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .helpful{
+    &__slide{
+      margin-bottom: 16px;
+    }
+    &__navigation{
+      display: flex;
+      justify-content: center;
+    }
+    .slider-top{
+      margin-bottom: 0;
+    }
+  }
+}

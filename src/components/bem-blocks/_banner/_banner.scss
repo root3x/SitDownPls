@@ -1,0 +1,86 @@
+.banner{
+  min-height: 600px;
+  padding: 150px 0;
+  background-image: url('../img/banner.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__title{
+    max-width: 508px;
+    margin-bottom: 8px;
+    font-family: 'PlayfairDisplay' ,serif;
+    font-size: 60px;
+    line-height: 72px;
+    color: $gold;
+  }
+  &__subtitle{
+    max-width: 508px;
+    margin-bottom: 60px;
+    font-size: 48px;
+    color: $white;
+    word-wrap: break-word;
+  }
+  &__btn{
+    padding: 22px 0;
+    width: 187px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .banner{
+    background-image: url('../img/banner-1024.webp');
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner{
+    background-image: url('../img/banner-768.webp');
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner{
+    position: relative;
+    padding: 30px 0;
+    min-height: 305px;
+    background-size: 100% 210px;
+    background-position: center top;
+    &__title{
+      max-width: 100%;
+      font-size: 8vw;
+      line-height: 120%;
+    }
+    &__subtitle{
+      max-width: 80%;
+      font-size: 6vw;
+    }
+    &__btn{
+      position: absolute;
+      right: 25px;
+      bottom: 0;
+      left: 25px;
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .banner{
+    background-image: url('../img/banner-320.webp');
+    &__title{
+      max-width: 200px;
+      font-size: 24px;
+      line-height: 120%;
+    }
+    &__subtitle{
+      min-width: 200px;
+      max-width: 80%;
+      font-size: 16;
+    }
+    &__btn{
+      right: 12px;
+      left: 12px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<section class="section sale">
+  <div class="container">
+    <div class="swiper sale__slider">
+      <div class="sale__top slider-top">
+        <h3 class="section__title sale__title h3">
+          Специальные предложения
+        </h3>
+        <div class="swiper-navigation sale__navigation slider-nav" data-da=".sale__slider,480,3">
+          <button class="btn btn-circle btn-circle--prev" aria-label="Предыдущие товары">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+          <button class="btn btn-circle btn-circle--next" aria-label="Следующие товары">
+            <svg class="arrow">
+              <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="swiper-wrapper sale__wrapper">
+        @@loop('_card-sale.html', 'components/bem-blocks/_sale-slider/cards-sale.json')
+      </div>
+    </div>
+  </div>
+</section>

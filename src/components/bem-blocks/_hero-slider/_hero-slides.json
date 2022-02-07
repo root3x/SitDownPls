@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Скидка 15% на первую покупку",
+    "img": "img/hero/1",
+    "img-1024": "img/hero/1-1024",
+    "img-768": "img/hero/1-768",
+    "img-320": "img/hero/1-320",
+    "alt": "Диван",
+    "button": "Получить!",
+    "linkto": "#",
+    "color": "--grey"
+  },
+  {
+    "title": "1000+ аксессуаров для дома",
+    "img": "img/hero/2",
+    "img-1024": "img/hero/2-1024",
+    "img-768": "img/hero/2-768",
+    "img-320": "img/hero/2-320",
+    "alt": "Лампа и цветок",
+    "button": "Подробнее",
+    "linkto": "#",
+    "color": "--grey"
+  },
+  {
+    "title": "Коллекция стильного и яркого текстиля",
+    "img": "img/hero/3",
+    "img-1024": "img/hero/3-1024",
+    "img-768": "img/hero/3-768",
+    "img-320": "img/hero/3-320",
+    "alt": "Ткань",
+    "button": "Подробнее",
+    "linkto": "#",
+    "color": "--white"
+  }
+]

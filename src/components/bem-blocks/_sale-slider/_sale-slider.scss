@@ -1,0 +1,47 @@
+.sale{
+  padding-top: 70px;
+  &__title{
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  &__wrapper{
+    // display: grid;
+    // grid-template-columns: minmax(296px, 1fr) minmax(624px, 2fr) minmax(296px, 1fr);
+    // gap: 32px;
+  }
+  .mini{
+    min-width: 23.125%;
+    max-width: 23.125%;
+  }
+  .big{
+    min-width: 48.75%;
+    max-width: 48.75%;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .sale{
+    .mini{
+      min-width: unset;
+      max-width: unset;
+    }
+    .big{
+      min-width: unset;
+      max-width: unset;
+      background-image: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sale{
+    &__wrapper{
+      margin-bottom: 16px;
+    }
+    &__navigation{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

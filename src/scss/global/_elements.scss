@@ -1,0 +1,1073 @@
+
+
+.btn{
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  user-select: none;
+  @include transit;
+  transition-timing-function: ease-out;
+  &:not(:disabled):not(.--disabled) {
+    cursor: pointer;
+  }
+  &.--disabled,
+  &:disabled{
+    color: $grey;
+    background-color: $grey-md;
+    pointer-events: none;
+  }
+  &.--primary{
+    font-weight: 700;
+    color: $white;
+    background-color: $primary;
+    border: 2px solid transparent;
+    border-radius: $border-radius;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        background-color: $primary-light;
+      }
+    }
+    &:focus{
+      outline: transparent;
+    }
+    &:focus-visible{
+      outline: transparent;
+      background-color: $primary-light;
+      border-color: $primary-dark;
+    }
+    &:active{
+      background-color: $primary-dark;
+    }
+  }
+  &.--outline{
+    font-weight: 700;
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+    border-radius: $border-radius;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        color: $white;
+        background-color: $primary;
+      }
+    }
+    &:focus{
+      outline: transparent;
+    }
+    &:focus-visible{
+      outline: transparent;
+      color: $white;
+      background-color: $primary-light;
+      border-color: $primary;
+    }
+    &:active{
+      color: $white;
+      background-color: $primary-dark;
+      border-color: $primary-dark;
+    }
+  }
+}
+
+.btn-big{
+  padding: $padding-big;
+}
+
+.btn-buy{
+  padding: $padding-buy;
+}
+
+
+.btn-circle{
+  box-sizing: border-box;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 2px solid $primary;
+  border-radius: 50%;
+  @include transit(.55);
+  &--prev{
+    transform: rotate(-180deg);
+  }
+  &--next{
+    transform: rotate(0);
+  }
+  .arrow{
+    width: 7px;
+    height: 12px;
+    @include center;
+    stroke-width: 2px;
+    stroke: $primary;
+    @include transit(.55);
+  }
+  @media screen and (min-width: 992px) {
+    &:hover:not(&--disabled){
+      background-color: $primary;
+      .arrow{
+        stroke: $white;
+      }
+    }
+  }
+  &:focus{
+    outline: transparent;
+  }
+  &:focus-visible:not(:disabled):not(&--disabled){
+    outline: transparent;
+    border-color: $primary;
+    background-color: $primary-light;
+    .arrow{
+      stroke: $white;
+    }
+  }
+  &:active:not(&--disabled){
+    background-color: $primary-dark;
+    border-color: $primary-dark;
+    .arrow{
+      stroke: $white;
+    }
+  }
+  &--disabled{
+    pointer-events: none;
+    border-color: $grey;
+    background-color: transparent !important;
+    .arrow{
+      stroke: $grey;
+    }
+  }
+}
+
+
+.link{
+  position: relative;
+  display: inline-block;
+  line-height: 22 / 16 * 100%;
+  word-wrap: break-word;
+  color: $black;
+  @include transit;
+  &::before{
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 0px;
+    bottom: 0px;
+    background-color: $pink;
+    z-index: -1;
+    opacity: 0;
+    @include transit;
+  }
+  @media screen and (min-width: 992px) {
+    &:hover{
+      color: $primary;
+    }
+  }
+  &:focus-visible{
+    outline: transparent;
+    color: $black;
+    &::before{
+      opacity: 1;
+    }
+  }
+  &:active{
+    color: $primary-dark;
+  }
+  &--light{
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1;
+    color: $grey;
+    &::before{
+      left: 5px;
+      right: 5px;
+      top: 8px;
+      bottom: 8px;
+    }
+    &:focus-visible{
+      color: $primary-dark;
+    }
+  }
+  &--primary{
+    color: $primary;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        color: $primary-light;
+      }
+    }
+    &:focus-visible{
+      color: $primary-dark;
+    }
+    &:active{
+      color: $primary-dark;
+    }
+  }
+  &--phone{
+    display: inline-flex;
+    align-items: center;
+    max-width: 150px;
+    font-size: 14px;
+    line-height: 1;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: $secondary;
+    &::before{
+      background-color: $bone;
+    }
+    @media screen and (min-width: 992px) {
+      &:hover:not(:focus-visible){
+        color: $secondary-light;
+        .phone{
+          fill: $secondary-light;
+        }
+      }
+    }
+    &:focus-visible{
+      color: $secondary;
+    }
+    &:active{
+      color: $secondary-dark;
+        .phone{
+          fill: $secondary-dark;
+        }
+    }
+    .phone{
+      width: 17px;
+      height: 17px;
+      margin-right: 2px;
+      fill: $secondary;
+      @include transit;
+    }
+  }
+}
+
+.link-icon{
+  display: inline-flex;
+  align-items: center;
+  &__name{
+    margin-right: 5px;
+    font-weight: 700;
+    max-width: 100%;
+    @include over(1);
+  }
+  &__icon{
+    max-height: 22px;
+    .small-arrow{
+      max-width: 22px;
+      max-height: 22px;
+      fill: transparent;
+      stroke: $primary;
+      stroke-width: 2px;
+      @include transit;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &:hover{
+      .small-arrow{
+        stroke: $primary-light;
+      }
+    }
+  }
+  &:focus-visible,
+  &:active{
+    .small-arrow{
+      stroke: $primary-dark;
+    }
+  }
+}
+
+.link-dropdown{
+  padding-right: 16px;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 24%;
+    right: 0;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $primary;
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);
+    @include transit;
+  }
+  @media screen and (min-width: 992px) {
+    &:hover{
+      &::after{
+        border-color: $primary-light;
+      }
+    }
+  }
+  &:focus-visible{
+    &::after{
+      border-color: $primary-dark;
+    }
+  }
+  &:active{
+    &::after{
+      border-color: $primary-dark;
+    }
+  }
+}
+
+.login-btn,
+.cart-btn{
+  position: relative;
+  display: inline-block;
+  &::before{
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: -2px;
+    bottom: -2px;
+    background-color: $primary-light;
+    opacity: 0;
+    z-index: -1;
+    @include transit;
+  }
+  &:focus-visible{
+    outline: transparent;
+    .login,
+    .cart{
+      fill: $white;
+    }
+    &::before{
+      opacity: 1;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &:hover{
+      .login,
+      .cart{
+        fill: $primary-light;
+      }
+    }
+  }
+  &:active{
+    .login,
+    .cart{
+      fill: $primary-dark;
+    }
+  }
+  .login,
+  .cart{
+    max-height: 28px;
+    max-width: 30px;
+    fill: $primary;
+    @include transit;
+  }
+}
+
+.cart-btn{
+  position: relative;
+  &::after{
+    content: attr(data-count);
+    position: absolute;
+    padding: 3px 5px;
+    top: 6px;
+    left: -12px;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    color: $white;
+    background-color: $secondary;
+    border-radius: 50%;
+  }
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  &__form{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    &:focus-within{
+      .search-icon{
+        fill: $primary;
+      }
+    }
+  }
+  &__input{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 18.5px 58px;
+    line-height: 19px;
+    color: $black;
+    background-color: $grey-light;
+    border: 2px solid $grey-light;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    @include transit;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        background-color: $grey-md;
+        border-color: $grey-md;
+      }
+    }
+    &:focus{
+      outline: none;
+      background-color: $pink-light;
+      border-color: $primary;
+    }
+    &:focus-visible, &:active{
+      outline: none;
+      background-color: $grey-light;
+      border-color: $grey-light;
+    }
+  }
+  &__btn{
+    position: absolute;
+    right: 32px;
+  }
+  .search-icon{
+    position: absolute;
+    left: 34px;
+    width: 16px;
+    height: 16px;
+    fill: $grey;
+    @include transit;
+  }
+}
+
+
+.choices{
+  min-width: 300px;
+  &::after{
+    z-index: 10;
+  }
+  &__inner{
+    position: relative;
+    padding: 16px 25px;
+    font-size: 16px;
+    background-color: $white;
+    border: 2px solid $grey-light;
+    border-radius: 0;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    z-index: 10;
+    @include transit;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        border-color: $primary;
+      }
+    }
+    &:active{
+      border-color: $primary-dark;
+    }
+  }
+  &__placeholder{
+    opacity: 1;
+    font-size: 16px;
+    color: $primary;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  &__list{
+    &--dropdown{
+      visibility: unset;
+      opacity: 0;
+      z-index: 9;
+      pointer-events: none;
+      top: 0;
+      margin-top: 0;
+      padding-top: 60px;
+      border: 2px solid $grey-light;
+      border-radius: 0;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      transform: scaleY(0);
+      transform-origin: center top;
+      @include transit;
+      .choices__list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 200px;
+        padding: 20px 30px;
+        @media screen and (max-width: 768px) {
+          max-height: 500px;
+        }
+        @media screen and (max-width: 576px) {
+          max-height: 200px;
+        }
+      }
+      .choices__item{
+        max-width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        line-height: 130%;
+        word-wrap: break-word;
+        word-break: break-word;
+        &:first-child{
+          display: none;
+        }
+        &--selectable.is-highlighted{
+          color: $primary;
+          background-color: transparent;
+          // @include transit(.35);
+        }
+      }
+    }
+    &--dropdown.is-active{
+      visibility: unset;
+      opacity: 1;
+      pointer-events: all;
+      transform: scaleY(1);
+    }
+  }
+}
+
+.is-open .choices__inner{
+  border-color: $grey-light;
+  border-radius: 0;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}
+.is-focused .choices__inner{
+  border-color: $primary;
+  background-color: $pink-light;
+}
+
+.is-open .choices__inner,
+.is-focused .choices__inner{
+  &:active{
+    border-color: $primary-dark;
+  }
+}
+
+.is-open .choices__list{
+  &--dropdown{
+    border-color: $grey-light;
+  }
+}
+
+.choices[data-type*=select-one] .choices__inner{
+  padding-bottom: 16px;
+}
+
+.choices[data-type*=select-one]{
+  &::after{
+    width: 8px;
+    height: 8px;
+    margin-top: -4.5px;
+    border-color: $primary $primary transparent transparent;
+    border-width: 1px;
+    right: 35px;
+    transform: rotate(135deg);
+    @include transit(.35);
+  }
+
+}
+.choices[data-type*=select-one].is-open::after{
+  margin-top: -4.5px;
+  border-color: transparent transparent $primary $primary;
+}
+
+
+// настройки инпутов
+input[type=search]::-ms-clear {
+  display: none;
+  width : 0;
+  height: 0;
+}
+input[type=search]::-ms-reveal {
+  display: none;
+  width : 0;
+  height: 0;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration { display: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input{
+  padding: 5px 13px;
+  font-size: 16px;
+  line-height: 1;
+  color: $grey-dark;
+  border: 1px solid $grey;
+  border-radius: $border-radius-small;
+  @include transit;
+  @media screen and (min-width: 992px) {
+    &:hover{
+      border-color: $primary;
+    }
+  }
+  &:focus-visible{
+    outline: transparent;
+    background-color: $pink;
+    border-color: $primary;
+  }
+  &:active{
+    border-color: $primary-dark;
+  }
+}
+
+
+//* burger
+:root {
+  --font-size: 1;
+  --color1: #a65cf0;
+  --borderRadius: 4px;
+}
+
+.burger {
+  display: inline-block;
+  font-size: var(--font-size);
+  cursor: pointer;
+  padding: 20px 10px;
+  & > div {
+    width: 24px;
+    height: 3px;
+    border-radius: var(--borderRadius);
+    background: var(--color1);
+    &::before,
+    &::after {
+      transition: font-size 0s;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      background: var(--color1);
+      border-radius: var(--borderRadius);
+    }
+    &::before {
+      margin-top: -10px;
+    }
+    &::after {
+      margin-top: 10px;
+    }
+  }
+}
+
+.burger {
+  & > div {
+    transition: background 0.4s, font-size 0s;
+    &::before,
+    &::after {
+      transition: font-size 0s;
+      transform-origin: center center;
+    }
+  }
+  &.toggled {
+    > div::before {
+      animation: burg2top 0.4s linear forwards;
+    }
+    > div {
+      background: transparent;
+    }
+    > div::after {
+      animation: burg2bottom 0.4s linear forwards;
+    }
+  }
+  &.unToggled {
+    > div::before {
+      animation: burg2topReset 0.4s linear forwards;
+    }
+    > div {
+      background: var(--color1);
+    }
+    > div::after {
+      animation: burg2bottomReset 0.4s linear forwards;
+    }
+  }
+
+  @keyframes burg2top {
+    0% {
+    }
+    20% {
+      margin-top: 0em;
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 0em;
+      transform: rotate(55deg);
+    }
+    100% {
+      margin-top: 0em;
+      transform: rotate(45deg);
+    }
+  }
+
+  @keyframes burg2bottom {
+    0% {
+    }
+    20% {
+      margin-top: 0em;
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 0em;
+      transform: rotate(-55deg);
+    }
+    100% {
+      margin-top: 0em;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @keyframes burg2topReset {
+    0% {
+      margin-top: 0em;
+      transform: rotate(45deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: 12px;
+      transform: rotate(0deg);
+    }
+    100% {
+      margin-top: 10px;
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes burg2bottomReset {
+    0% {
+      margin-top: 0em;
+      transform: rotate(-45deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    60% {
+      margin-top: -12px;
+      transform: rotate(0deg);
+    }
+    100% {
+      margin-top: -10px;
+      transform: rotate(0deg);
+    }
+  }
+}
+
+
+//* checkboxes
+.checkboxes{
+  &__item{
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 12px;
+    }
+  }
+  &__checkbox{
+    opacity: 0;
+    position: absolute;
+    left: -9999px;
+  }
+  &__label{
+    position: relative;
+    padding-left: 32px;
+    line-height: 20 / 16 * 100%;
+    color: $grey-dark;
+    cursor: pointer;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $grey;
+      border-radius: $border-radius-small;
+      background: transparent;
+      @include transit(.24);
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4.5px;
+      display: inline-block;
+      width: 13px;
+      height: 7px;
+      border-left: 2px solid $white;
+      border-bottom: 2px solid $white;
+      transform: rotate(-120deg);
+      @include transit(.4);
+    }
+    @media screen and (min-width: 992px) {
+      &:hover{
+        &::before{
+          border-color: $primary;
+        }
+      }
+    }
+  }
+  &__checkbox + &__label::after{
+    opacity: 0;
+  }
+  &__checkbox:checked + &__label::after{
+    opacity: 1;
+    transform: rotate(-47deg);
+    transition-delay: .1s;
+  }
+  &__checkbox:checked + &__label::before{
+    background-color: $primary;
+    border-color: $primary;
+  }
+  &__checkbox:focus-visible + &__label::before{
+    border-color: $primary-light;
+  }
+}
+
+
+
+
+//* price ranger
+.price-ranger{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+  max-width: 300px;
+  &__wrapper{
+    grid-column: 1 / 3;
+    padding-top: 10px;
+  }
+  &__field{
+    display: flex;
+    align-items: center;
+    &:nth-child(2){
+      justify-self: flex-end;
+    }
+  }
+  &__name{
+    margin-right: 10px;
+    color: $grey-dark;
+    @include over(1);
+  }
+  &__input{
+    max-width: 86px;
+  }
+  &__slider{
+    position: relative;
+    height: 3px;
+    background-color: $grey-md;
+    border-radius: 3px;
+  }
+  &__progress{
+    position: absolute;
+    left: 3%;
+    right: 50%;
+    height: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    z-index: 5;
+    background-color: $primary;
+    transition: background-color .55s;
+  }
+  &__ranger{
+    position: relative;
+  }
+  &__input-range{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 3px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    z-index: 10;
+    &::-webkit-slider-thumb{
+      width: 0;
+      height: 0;
+      // background-color: $primary;
+      border-left: 7px solid transparent;
+	    border-right: 7px solid transparent;
+	    border-bottom: 13px solid $primary;
+      border-radius: 2px;
+      pointer-events: auto;
+      -webkit-appearance: none;
+      @include transit;
+      cursor: pointer;
+    }
+    &::-moz-range-thumb{
+      width: 13px;
+      height: 13px;
+      background-color: $primary;
+      pointer-events: auto;
+      -webkit-appearance: none;
+      @include transit;
+      cursor: pointer;
+    }
+    &:focus-visible{
+      outline: transparent;
+      &::-webkit-slider-thumb{
+        border-bottom-color: $primary-dark;
+      }
+      &::-moz-range-thumb{
+        border-bottom-color: $primary-dark;
+      }
+      & ~ .price-ranger__progress{
+        background-color: $primary-dark;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      &:hover{
+        &::-webkit-slider-thumb{
+          border-bottom-color: $primary-light;
+        }
+        &::-moz-range-thumb{
+          border-bottom-color: $primary-light;
+        }
+      }
+    }
+    &:active{
+      &::-webkit-slider-thumb{
+        border-bottom-color: $primary-dark;
+      }
+      &::-moz-range-thumb{
+        border-bottom-color: $primary-dark;
+      }
+      & ~ .price-ranger__progress{
+        background-color: $primary-dark;
+      }
+    }
+  }
+}
+
+
+
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 30px;
+  background-color: $grey-light;
+  border-radius: $border-radius;
+  background-position: right 30px bottom 30px;
+  background-repeat: no-repeat;
+  &__link-img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        & ~ .card__link{
+          color: $primary;
+        }
+      }
+    }
+    &:focus-visible{
+      outline: 1px solid rgba($primary, .2);
+    }
+  }
+  &__model{
+    display: block;
+  }
+}
+
+.card-sale{
+  min-height: 511px;
+  height: auto;
+  &__discount{
+    position: absolute !important;
+    top: 30px;
+    left: 0;
+  }
+  .card__link{
+    max-width: 225px;
+  }
+}
+
+.card-rating{
+  min-height: 420px;
+  height: auto;
+  &__rating{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+}
+
+.picture{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  img{
+    max-width: 100%;
+  }
+}
+
+
+.question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  @include transit;
+  path{
+    fill: $secondary;
+    @include transit;
+  }
+  @media screen and (min-width: 992px) {
+    &:hover{
+      background-color: $secondary;
+      path{
+        fill: $white;
+      }
+    }
+  }
+  &:focus{
+    outline: transparent;
+  }
+  &:focus-visible{
+    outline: transparent;
+  }
+  &:active{
+    outline: transparent;
+    background-color: transparent;
+    path{
+      fill: $secondary-dark;
+    }
+  }
+}
+
+.social{
+  width: 30px;
+  height: 30px;
+  fill: $grey;
+  @include transit;
+}
+
+.tooltip{
+  max-width: 147px;
+  font-size: 9px;
+  line-height: 14px;
+}
+
+.tippy-box[data-theme~='myGrey'] {
+  padding: 5px;
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  border-radius: 3px;
+}
+.tippy-box[data-theme~='myGrey'] > .tippy-arrow::before{
+  border-top-color: $black;
+  transform: scale(1.2);
+}

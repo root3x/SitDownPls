@@ -1,0 +1,57 @@
+<header class="header">
+  <div class="header__top">
+    <div class="container header__container">
+      <div class="header__top-left">
+        <p class="header__country">
+          <span>Ваш регион:</span>
+          <select name="country" id="country" class="header__top-select">
+          </select>
+        </p>
+        <a href="tel:+74958854547" class="link link--phone">
+          <svg class="phone">
+            <use xlink:href="img/sprite.svg#sprite--phone" />
+          </svg>
+          +7 (495) 885-45-47
+        </a>
+      </div>
+      <ul class="header__top-menu topmenu" data-da=".mainnav__list,576,last">
+        <li class="topmenu__item">
+          <a href="#" class="link link--light">
+            О компании
+          </a>
+        </li>
+        <li class="topmenu__item">
+          <a href="#" class="link link--light">
+            Гарантия и возврат
+          </a>
+        </li>
+        <li class="topmenu__item">
+          <a href="#" class="link link--light">
+            Корпоративным клиентам
+          </a>
+        </li>
+        <li class="topmenu__item">
+          <a href="#" class="link link--light">
+            Дизайн-решение
+          </a>
+        </li>
+      </ul>
+      @@include('../bem-blocks/_logo.html')
+      @@include('../bem-blocks/_mainmenu/_mainmenu.html')
+      @@include('../bem-blocks/_search/_search.html')
+      <div class="header__join">
+        <a href="#" class="header__login login-btn">
+          <svg class="login">
+            <use xlink:href="img/sprite.svg#sprite--profile" />
+          </svg>
+        </a>
+        <a href="#" class="header__cart cart-btn" data-count="0">
+          <svg class="cart">
+            <use xlink:href="img/sprite.svg#sprite--cart" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>

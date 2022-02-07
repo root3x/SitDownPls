@@ -1,0 +1,132 @@
+.callback{
+  padding-bottom: 70px;
+  &__title{
+    margin-bottom: 10px;
+  }
+  &__descr{
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 19px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  &__wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 32px;
+  }
+  &__image{
+    margin: -17px 0 auto auto;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__field{
+    display: flex;
+    flex-direction: column;
+  }
+  &__input{
+    width: 100%;
+    padding: 6px 18px;
+    font-size: 16px;
+    line-height: 40px;
+    color: $black;
+    background-color: $grey-light;
+    border-radius: $border-radius;
+    border: 1px solid $grey-light;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        background-color: $grey-md;
+        border-color: $grey-light;
+      }
+    }
+    &.error{
+      border-color: $error;
+    }
+    &.valid{
+      border-color: $success;
+    }
+  }
+  label{
+    &.error{
+      order: -1;
+      margin-bottom: 6px;
+      padding: 0 18px;
+      font-size: 12px;
+      color: $error;
+    }
+  }
+  &__rules{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-word;
+    .checkboxes{
+      &__label{
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        &::before{
+          width: 14px;
+          height: 14px;
+        }
+        &::after{
+          top: 5.5px;
+          left: 3px;
+          width: 8px;
+          height: 5px;
+        }
+      }
+    }
+  }
+  &__btn{
+    margin-bottom: 12px;
+  }
+  &__link{
+    max-width: 100%;
+    margin-left: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .callback{
+    &__wrapper{
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .callback{
+    &__wrapper{
+      grid-template-columns: 1fr;
+    }
+    &__image{
+      display: none;
+    }
+    &__rules{
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .callback{
+
+  }
+}

@@ -1,0 +1,31 @@
+<article class="swiper-slide sale__slide card card-sale @@size" style="background-image: url(@@imgsrc-bone);">
+  <span class="price-sale card-sale__discount">
+    - @@discount
+  </span>
+  <a href="@@link-to" class="card__link-img">
+    <div class="swiper-lazy-preloader"></div>
+    <picture class="picture">
+      <source data-srcset="@@imgsrc.webp">
+      <img class="swiper-lazy" data-src="@@imgsrc.png" alt="@@name">
+    </picture>
+  </a>
+  <a href="@@link-to" class="link card__link">
+    <h4 class="h4">
+      @@name
+      <span class="card__model">
+        @@model
+      </span>
+    </h4>
+  </a>
+  <p class="price sale__price">
+    <span class="price--new">
+      @@price-new руб
+    </span>
+    <span class="price--old">
+      @@price-old руб
+    </span>
+  </p>
+  <button class="btn --outline btn-buy sale__btn">
+    @@buy-text
+  </button>
+</article>

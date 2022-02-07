@@ -1,0 +1,116 @@
+<div style="margin-top: 150px;"></div>
+
+<button class="btn --primary btn-big">
+  Получить!
+</button>
+<button class="btn --outline btn-buy">
+  Купить
+</button>
+<button class="btn btn-circle --prev" aria-label="Предыдущие товары">
+  <svg class="arrow">
+    <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+  </svg>
+</button>
+<button class="btn btn-circle btn-circle--disabled --next" aria-label="Следующие товары">
+  <svg class="arrow">
+    <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+  </svg>
+</button>
+<a href="#" class="link">
+  Каталог
+</a>
+<a href="#" class="link link--light">
+  О компании
+</a>
+<button class="link link--primary link-dropdown">
+  Москва
+</button>
+<h2 class="h2">
+  Скидка 15% на первую покупку
+</h2>
+<h3 class="h3">
+  Специальные предложения
+</h3>
+<h4 class="h4">
+  Кресло велюровое “X-24”
+</h4>
+<p class="price">
+  94 990 руб
+</p>
+<p class="price">
+  <span class="price--new">
+    15 990 руб
+  </span>
+  <span class="price--old">
+    24 990 руб
+  </span>
+</p>
+<span class="price-sale">
+  - 9 000
+</span>
+<span class="rating --svg__rating" data-rating="5,0">
+</span>
+<p class="product-descr">
+  Мини 120 см без ящика Stark синий (Рогожка)
+</p>
+<a href="tel:+74958854547" class="link link--phone">
+  <svg class="phone">
+    <use xlink:href="img/sprite.svg#sprite--phone" />
+  </svg>
+  +7 (495) 885-45-47
+</a>
+<!-- <div class="search">
+  <form action="#" class="search__form">
+    <input class="search__input" type="search" name="search" id="search" placeholder="Я хочу купить...">
+    <svg class="search-icon">
+      <use xlink:href="img/sprite.svg#sprite--search"/>
+    </svg>
+    <button type="submit" class="btn btn-circle search__btn" aria-label="Кнопка искать">
+      <svg class="arrow">
+        <use xlink:href="img/sprite.svg#sprite--slider-arrow" />
+      </svg>
+    </button>
+  </form>
+  <select name="sort" id="search-sort" class="search__sort" aria-label="Выобор категории">
+    <option value="">Категория</option>
+  </select>
+</div> -->
+
+<div class="burger">
+  <div></div>
+</div>
+
+<ul class="checkboxes">
+  <li class="checkboxes__item">
+    <input type="checkbox" name="category" value="sofa" id="sofa" class="checkboxes__checkbox">
+    <label for="sofa" class="checkboxes__label">Диваны</label>
+  </li>
+  <li class="checkboxes__item">
+    <input type="checkbox" name="category" value="armchair" id="armchair" class="checkboxes__checkbox">
+    <label for="armchair" class="checkboxes__label">Кресла</label>
+  </li>
+</ul>
+
+
+<div class="price-ranger">
+  <fieldset class="price-ranger__field">
+    <span class="price-ranger__name">
+      от
+    </span>
+    <input type="number" name="price" value="2000" id="price-from" min="0" max="300000" class="input price-ranger__input price-min">
+  </fieldset>
+  <fieldset class="price-ranger__field">
+    <span class="price-ranger__name">
+      до
+    </span>
+    <input type="number" name="price" value="150000" id="price-to" min="0" max="300000" class="input price-ranger__input price-max">
+  </fieldset>
+  <div class="price-ranger__wrapper">
+    <div class="price-ranger__slider">
+      <input type="range" name="range-min" id="range-min" min="0" max="300000" value="2000" class="price-ranger__input-range range-min" step="500">
+      <input type="range" name="range-max" id="range-max" min="0" max="300000" value="150000" class="price-ranger__input-range range-max" step="500">
+      <div class="price-ranger__progress"></div>
+    </div>
+  </div>
+</div>
+
