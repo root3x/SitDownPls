@@ -1,0 +1,33 @@
+<div id="modal-form" class="modal-overlay">
+  <div class="container modal-container">
+    <div class="modal-window">
+      <button class="modal-window__close">
+        <svg class="close">
+          <use xlink:href="@@webRoot/img/sprite.svg#sprite--close" />
+        </svg>
+      </button>
+      <h3 class="h3 modal-window__title">Купить в один клик</h3>
+      <p class="modal-window__descr">
+        Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.
+      </p>
+      <form action="#" class="form">
+        <fieldset class="form__field">
+          <input type="text" name="name" id="cal-name" class="input form__input" placeholder="Как вас зовут?">
+        </fieldset>
+        <fieldset class="form__field">
+          <input type="phone" name="phone" id="cal-phone" class="input form__input" placeholder="Ваш телефон">
+        </fieldset>
+        <div class="form__footer">
+          <button type="submit" class="btn --primary btn-buy form__btn">
+            Отправить
+          </button>
+          <div class="form__rules checkboxes">
+            <input type="checkbox" name="check" id="cal-check" class="checkboxes__checkbox" checked>
+            <label for="cal-check" class="checkboxes__label form__label">Принимаю</label>
+            <a href="#" class="link link--primary form__link"> пользовательское соглашение</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

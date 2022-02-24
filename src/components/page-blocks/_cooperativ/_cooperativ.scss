@@ -1,0 +1,113 @@
+.coop{
+  padding-bottom: 70px;
+  &__wrapper{
+    max-width: 65%;
+  }
+  &__block{
+    margin-bottom: 32px;
+  }
+  &__title{
+    margin-bottom: 32px;
+  }
+  &__subtitle{
+    margin-bottom: 12px;
+  }
+  &__text{
+    line-height: 28px;
+    word-wrap: break-word;
+    word-break: break-word;
+    &.--secondary{
+      font-weight: 600;
+      line-height: 22px;
+      color: $secondary;
+    }
+    &.mb{
+      margin-bottom: 12px;
+    }
+  }
+  &__o-list{
+    counter-reset: cCounter;
+  }
+  &__o-item{
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 26px;
+    &::before{
+      content: counter(cCounter)".";
+      counter-increment: cCounter;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-weight: 600;
+      color: $secondary;
+    }
+  }
+  &__list{
+    max-width: 75%;
+  }
+  &__item{
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 37px;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background-repeat: no-repeat;
+    }
+  }
+  &__garant{
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+    min-height: 116px;
+    padding-left: 100px;
+    background-image: url('../img/pen.webp');
+    background-repeat: no-repeat;
+  }
+  &__garant-text{
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .coop{
+    &__wrapper{
+      max-width: 88%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .coop{
+    &__wrapper{
+      max-width: 100%;
+    }
+    &__list{
+      max-width: 100%;
+    }
+    &__garant{
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .coop{
+    &__garant{
+      min-height: 72px;
+      max-height: 72px;
+      padding-left: 64px;
+      background-size: contain;
+    }
+    &__garant-text{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+@@include('@@webRoot/components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"SitDownPls — интернет-магазин мебели",
+"description":"интернет-магазин мебели",
+"keywords":"SitDownPls, интернет-магазин, мебель",
+"favicon":"@@webRoot/img/favicons/favicon",
+})
+
+<body>
+	@@include('@@webRoot/components/page-blocks/_header.html')
+	<main class="main">
+    <!-- @@include('@@webRoot/components/bem-blocks/_breadcrumbs/_breadcrumbs.html') -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="/" class="link link--light">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="/catalog" class="link link--light breadcrumbs__link--active">Каталог</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+
+    @@include('@@webRoot/components/page-blocks/_catalog/_catalog.html')
+
+  </main>
+	@@include('@@webRoot/components/page-blocks/_footer.html')
+	@@include('@@webRoot/components/page-blocks/_scripts.html')
+</body>
+
+</html>

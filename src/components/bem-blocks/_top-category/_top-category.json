@@ -15,7 +15,7 @@
         "link": "#"
       }
     },
-    "btn-link": "#",
+    "btn-link": "/catalog",
     "imgsrc": "img/category/category-sofa",
     "btn-text": "В каталог",
     "class": "big",
@@ -37,7 +37,7 @@
         "link": ""
       }
     },
-    "btn-link": "#",
+    "btn-link": "/catalog",
     "imgsrc": "img/category/category-armchair",
     "btn-text": "В каталог",
     "class": "big",
@@ -59,7 +59,7 @@
         "link": ""
       }
     },
-    "btn-link": "#",
+    "btn-link": "/catalog",
     "imgsrc": "img/category/category-bed",
     "btn-text": "В каталог",
     "class": "mini",
@@ -81,7 +81,7 @@
         "link": ""
       }
     },
-    "btn-link": "#",
+    "btn-link": "/catalog",
     "imgsrc": "img/category/category-chest",
     "btn-text": "В каталог",
     "class": "mini",
@@ -103,7 +103,7 @@
         "link": ""
       }
     },
-    "btn-link": "#",
+    "btn-link": "/catalog",
     "imgsrc": "img/category/category-chair",
     "btn-text": "В каталог",
     "class": "mini",

@@ -1,0 +1,245 @@
+.catalog{
+  padding-bottom: 70px;
+  &__wrapper{
+    display: grid;
+    grid-template-columns: minmax(296px, 1fr) 4fr;
+    gap: 32px;
+  }
+}
+
+
+.csidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  &__title{
+    max-width: 100%;
+    font-size: 18px;
+    word-wrap: break-word;
+    &--small{
+      display: none;
+    }
+  }
+  &__subtitle{
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: $grey-dark;
+  }
+  &__subtitle-icon{
+    display: none;
+  }
+  .price-ranger{
+    padding: 0 0 20px 0;
+  }
+  &__banner{
+    // margin-top: auto;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+  &__color{
+    margin-bottom: 36px;
+  }
+  &__banner-wrap{
+    margin-top: -2px;
+    padding: 30px;
+    background-color: $black;
+  }
+  &__banner-title{
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-family: PlayfairDisplay, serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: $gold;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  &__banner-subtitle{
+    max-width: 90%;
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 21px;
+    color: $grey;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  .checkboxes{
+    &__item{
+      &--more{
+        display: none;
+      }
+    }
+  }
+}
+
+
+.cards-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding-top: 24px;
+  margin-bottom: 32px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .catalog{
+    &__wrapper{
+      grid-template-columns: 1fr;
+    }
+  }
+  .csidebar{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__title{
+      &--big{
+        display: none;
+      }
+      &--small{
+        display: flex;
+      }
+    }
+    &__subtitle{
+      position: relative;
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 0;
+      justify-content: space-between;
+      font-weight: 400;
+      background-color: $grey-light;
+      border: 2px solid $grey-light;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: border-color .45s, opacity .45s;
+      &.active{
+        border-color: $primary-dark;
+        z-index: 250;
+        .csidebar__subtitle-icon{
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &__subtitle-icon{
+      display: flex;
+      @include transit;
+    }
+    &__banner{
+      display: none;
+    }
+    &__color{
+      margin-bottom: 0;
+    }
+    &__category,
+    &__price,
+    &__sale,
+    &__color{
+      position: relative;
+      // min-width: 187px;
+      width: 19.643%;
+      // z-index: 2;
+    }
+    .checkboxes{
+      &__item{
+        &--more{
+          display: flex;
+        }
+      }
+    }
+    .dropdown{
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      padding: 35px 25px 25px 25px;
+      background-color: $grey-light;
+      border: 1px solid $grey-md;
+      border-radius: $border-radius;
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+      transform-origin: center top;
+      transform: scaleY(0);
+      transition: transform .45s, opacity .45s;
+      &.active{
+        opacity: 1;
+        pointer-events: all;
+        user-select: auto;
+        transform: scaleY(1);
+        z-index: 3;
+      }
+    }
+  }
+  .price-ranger{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &__wrapper{
+      display: none;
+    }
+    &__field{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .csidebar{
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 80%;
+    z-index: 8;
+    &__category,
+    &__price,
+    &__sale,
+    &__color{
+      min-width: 187px;
+    }
+    &__title{
+      width: 100%;
+    }
+  }
+  .cards-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .csidebar{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .csidebar{
+    gap: 16px;
+    &__category,
+    &__price,
+    &__sale,
+    &__color{
+      min-width: 46.36%;
+    }
+  }
+  .cards-wrapper{
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .csidebar{
+    &__category,
+    &__price,
+    &__sale,
+    &__color{
+      min-width: 47.3%;
+    }
+  }
+}

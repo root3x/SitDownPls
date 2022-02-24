@@ -1,0 +1,41 @@
+.similar{
+  padding-bottom: 70px;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+  .similar{
+    &__wrapper{
+      margin-bottom: 16px;
+    }
+    .slider-nav{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .card{
+    &__name{
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .card-rating{
+    min-height: 278px;
+    gap: 16px;
+    &__rating{
+      top: 16px;
+      left: 16px;
+      width: 35px;
+      height: 13px;
+      &::after{
+        font-size: 12px;
+      }
+    }
+    &__btn{
+      width: 100%;
+      padding: 10px 0;
+    }
+  }
+}

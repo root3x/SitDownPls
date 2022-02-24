@@ -1,0 +1,257 @@
+<section class="section catalog">
+  <div class="container">
+    <div class="catalog__wrapper">
+      <div class="catalog__sidebar csidebar">
+        <span class="csidebar__title csidebar__title--big">
+          Фильтровать по:
+        </span>
+        <span class="csidebar__title csidebar__title--small">
+          Фильтры:
+        </span>
+        <div class="csidebar__category">
+          <h5 class="h5 csidebar__subtitle active">
+            <span class="csidebar__subtitle-text">Категория</span>
+            <span class="csidebar__subtitle-icon">
+              <svg class="mini-arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--mini-arrow" />
+              </svg>
+            </span>
+          </h5>
+          <ul class="checkboxes dropdown active">
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="sofa" id="sofa" class="checkboxes__checkbox" checked>
+              <label for="sofa" class="checkboxes__label">
+                Диваны
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="armchair" id="armchair" class="checkboxes__checkbox">
+              <label for="armchair" class="checkboxes__label">
+                Кресла
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="poufs" id="poufs" class="checkboxes__checkbox">
+              <label for="poufs" class="checkboxes__label">
+                Пуфы
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="beds" id="beds" class="checkboxes__checkbox">
+              <label for="beds" class="checkboxes__label">
+                Кровати
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="stands" id="stands" class="checkboxes__checkbox">
+              <label for="stands" class="checkboxes__label">
+                Тумбы
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="chests" id="chests" class="checkboxes__checkbox">
+              <label for="chests" class="checkboxes__label">
+                Комоды
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="chairs" id="chairs" class="checkboxes__checkbox">
+              <label for="chairs" class="checkboxes__label">
+                Стулья
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="tables" id="tables" class="checkboxes__checkbox">
+              <label for="tables" class="checkboxes__label">
+                Столы
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="category" value="accessory" id="accessory" class="checkboxes__checkbox">
+              <label for="accessory" class="checkboxes__label">
+                Аксессуары
+              </label>
+            </li>
+            <li class="checkboxes__item--more">
+              <a href="#" class="link link--primary">
+                + ещё 12
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="csidebar__price">
+          <h5 class="h5 csidebar__subtitle">
+            <span class="csidebar__subtitle-text">
+              Цена
+            </span>
+            <span class="csidebar__subtitle-icon">
+              <svg class="mini-arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--mini-arrow" />
+              </svg>
+            </span>
+          </h5>
+          <div class="price-ranger dropdown">
+            <fieldset class="price-ranger__field">
+              <span class="price-ranger__name">
+                от
+              </span>
+              <input type="number" name="price" value="2000" id="price-from" min="0" max="300000" class="input price-ranger__input price-min">
+            </fieldset>
+            <fieldset class="price-ranger__field">
+              <span class="price-ranger__name">
+                до
+              </span>
+              <input type="number" name="price" value="150000" id="price-to" min="0" max="300000" class="input price-ranger__input price-max">
+            </fieldset>
+            <div class="price-ranger__wrapper">
+              <div class="price-ranger__slider">
+                <input type="range" name="range-min" id="range-min" min="0" max="300000" value="2000" class="price-ranger__input-range range-min" step="500">
+                <input type="range" name="range-max" id="range-max" min="0" max="300000" value="150000" class="price-ranger__input-range range-max" step="500">
+                <div class="price-ranger__progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="csidebar__sale">
+          <h5 class="h5 csidebar__subtitle">
+            <span class="csidebar__subtitle-text">
+              Скидка
+            </span>
+            <span class="csidebar__subtitle-icon">
+              <svg class="mini-arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--mini-arrow" />
+              </svg>
+            </span>
+          </h5>
+          <ul class="checkboxes dropdown">
+            <li class="checkboxes__item">
+              <input type="checkbox" name="sale" value="over5" id="over5" class="checkboxes__checkbox">
+              <label for="ove5" class="checkboxes__label">
+                Более 5 000
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="sale" value="less5" id="less5" class="checkboxes__checkbox">
+              <label for="less5" class="checkboxes__label">
+                Менее 5 000
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="sale" value="nomatter" id="nomatter" class="checkboxes__checkbox" checked>
+              <label for="nomatter" class="checkboxes__label">
+                Не важно
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="csidebar__color">
+          <h5 class="h5 csidebar__subtitle">
+            <span class="csidebar__subtitle-text">
+              Цвет
+            </span>
+            <span class="csidebar__subtitle-icon">
+              <svg class="mini-arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--mini-arrow" />
+              </svg>
+            </span>
+          </h5>
+          <ul class="checkboxes dropdown">
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="brown" id="brown" class="checkboxes__checkbox">
+              <label for="brown" class="checkboxes__label">
+                Коричневый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="sale" value="black" id="black" class="checkboxes__checkbox">
+              <label for="black" class="checkboxes__label">
+                Черный
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="beige" id="beige" class="checkboxes__checkbox">
+              <label for="beige" class="checkboxes__label">
+                Бежевый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="grey" id="grey" class="checkboxes__checkbox">
+              <label for="grey" class="checkboxes__label">
+                Серый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="white" id="white" class="checkboxes__checkbox">
+              <label for="white" class="checkboxes__label">
+                Белый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="blue" id="blue" class="checkboxes__checkbox">
+              <label for="blue" class="checkboxes__label">
+                Синий
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="orange" id="orange" class="checkboxes__checkbox" checked>
+              <label for="orange" class="checkboxes__label">
+                Оранжевый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="yellow" id="yellow" class="checkboxes__checkbox">
+              <label for="yellow" class="checkboxes__label">
+                Желтый
+              </label>
+            </li>
+            <li class="checkboxes__item">
+              <input type="checkbox" name="color" value="green" id="green" class="checkboxes__checkbox">
+              <label for="green" class="checkboxes__label">
+                Зеленый
+              </label>
+            </li>
+            <li class="checkboxes__item--more">
+              <a href="#" class="link link--primary">
+                + ещё 7
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="csidebar__banner">
+          <picture class="picture">
+            <source data-srcset="@@webRoot/img/banner-catalog.webp">
+            <img class="lazyload" data-src="@@webRoot/img/banner-catalog.png" alt="Стулья">
+          </picture>
+          <div class="csidebar__banner-wrap">
+            <h4 class="h4 csidebar__banner-title">
+              Оксфорд 1950
+            </h4>
+            <p class="csidebar__banner-subtitle">
+              Новая коллекция изысканных кресел
+            </p>
+            <a href="/catalog" class="link link--primary link-icon">
+              <span class="link-icon__name">
+                В каталог
+              </span>
+              <span class="link-icon__icon">
+                <svg class="small-arrow">
+                  <use xlink:href="@@webRoot/img/sprite.svg#sprite--small-arrow" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="catalog__content">
+        <h2 class="h4 catalog__content-title" data-da=".catalog__wrapper,1200,first">
+          Каталог
+        </h2>
+        <div class="cards-wrapper">
+          @@loop('_catalog-card.html', 'components/page-blocks/_catalog/_catalog-cards.json')
+        </div>
+        <div class="pagination">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

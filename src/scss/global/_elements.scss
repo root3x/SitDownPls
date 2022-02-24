@@ -1,4 +1,10 @@
-
+.hidden {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  padding-right: 15px;
+  overflow: hidden;
+}
 
 .btn{
   box-sizing: border-box;
@@ -42,7 +48,7 @@
     }
   }
   &.--outline{
-    font-weight: 700;
+    font-weight: 600;
     color: $primary;
     background-color: transparent;
     border: 2px solid $primary;
@@ -432,6 +438,12 @@
   }
 }
 
+.mini-arrow{
+  width: 12px;
+  height: 12px;
+  fill: $primary;
+  @include transit;
+}
 
 .choices{
   min-width: 300px;
@@ -501,9 +513,6 @@
         line-height: 130%;
         word-wrap: break-word;
         word-break: break-word;
-        &:first-child{
-          display: none;
-        }
         &--selectable.is-highlighted{
           color: $primary;
           background-color: transparent;
@@ -774,9 +783,11 @@ input[type=number] {
     left: -9999px;
   }
   &__label{
+    max-width: 100%;
     position: relative;
     padding-left: 32px;
     line-height: 20 / 16 * 100%;
+    word-wrap: break-word;
     color: $grey-dark;
     cursor: pointer;
     &::before{
@@ -1047,6 +1058,23 @@ input[type=number] {
   }
 }
 
+.close{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  fill: $grey;
+  @include transit;
+  &::before{
+    content: none;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: $pink;
+  }
+}
+
 .social{
   width: 30px;
   height: 30px;
@@ -1070,4 +1098,320 @@ input[type=number] {
 .tippy-box[data-theme~='myGrey'] > .tippy-arrow::before{
   border-top-color: $black;
   transform: scale(1.2);
+}
+
+
+//* form
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__field{
+    display: flex;
+    flex-direction: column;
+  }
+  &__input{
+    width: 100%;
+    padding: 6px 18px;
+    font-size: 16px;
+    line-height: 40px;
+    color: $black;
+    background-color: $grey-light;
+    border-radius: $border-radius;
+    border: 1px solid $grey-light;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        background-color: $grey-md;
+        border-color: $grey-light;
+      }
+    }
+    &.error{
+      border-color: $error;
+    }
+    &.valid{
+      border-color: $success;
+    }
+  }
+  label{
+    &.error{
+      order: -1;
+      margin-bottom: 6px;
+      padding: 0 18px;
+      font-size: 12px;
+      color: $error;
+    }
+  }
+  &__btn{
+    margin-bottom: 12px;
+  }
+  &__link{
+    max-width: 100%;
+    margin-left: 5px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  &__rules{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-word;
+    .checkboxes{
+      &__label{
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        &::before{
+          width: 14px;
+          height: 14px;
+        }
+        &::after{
+          top: 5.5px;
+          left: 3px;
+          width: 8px;
+          height: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+//* modal
+.modal-overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1000;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  background-color: rgba($black, .3);
+  @include transit;
+  &--active{
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    user-select: auto;
+  }
+}
+
+.modal-window{
+  position: relative;
+  top: 15%;
+  width: 624px;
+  max-width: 100%;
+  padding: 30px;
+  background-color: $white;
+  border-radius: $border-radius;
+  transform: translateY(-200%);
+  @include transit;
+  &--active{
+    transform: translateY(0);
+  }
+  &__close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+    @media screen and (min-width: 992px) {
+      &:hover{
+        .close{
+          fill: $primary;
+        }
+      }
+    }
+    &:focus-visible{
+      .close{
+        outline: transparent;
+        fill: $primary-dark;
+        &::before{
+          content: '';
+        }
+      }
+    }
+    &:active{
+      .close{
+        fill: $primary-dark;
+      }
+    }
+  }
+  &__title{
+    margin-bottom: 5px;
+  }
+  &__descr{
+    max-width: 65%;
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 19 / 14 * 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+.modal-container{
+  height: 115%;
+}
+
+.modal-thanks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 421px;
+  max-width: 100%;
+  // transform: translateY(0);
+  .eleph{
+    margin-bottom: 32px;
+  }
+  .h3{
+    text-align: center;
+  }
+}
+
+.modal-slider{
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  .slider-big .product-slide{
+    height: 418px;
+    padding: 50px;
+  }
+  .slider-thumbs{
+    padding: 20px 50px;
+    &__wrapper{
+      height: 126px;
+      max-height: 126px;
+    }
+    .product-slide{
+      img{
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .modal-slider{
+    .slider-thumbs{
+      min-height: 126px;
+      padding: 20px 67px;
+      &::before,
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        width: 62px;
+        background-color: $grey-light;
+        z-index: 290;
+      }
+      &::before{
+        left: 0;
+      }
+      &::after{
+        right: 0;
+      }
+      &__wrapper{
+        flex-direction: row;
+      }
+      &__navigation{
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 50%;
+        // height: 32px;
+        display: inline-flex;
+        transform: translateY(-50%);
+        z-index: 300;
+        .btn-circle--next{
+          right: 0;
+        }
+        .btn-circle{
+          position: absolute;
+          top: -15px;
+          display: flex;
+          z-index: 300;
+        }
+      }
+      .product-slide{
+        height: 100% !important;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .modal-window{
+    // margin: 0 12px;
+    padding: 30px 16px;
+    &__descr{
+      max-width: 100%;
+    }
+    .form{
+      &__label{
+        font-size: 11px;
+        &::after{
+          top: 3.5px;
+        }
+      }
+      &__link{
+        font-size: 11px;
+      }
+    }
+  }
+  .modal-thanks{
+    margin: 0;
+    min-height: 212px;
+  }
+  .modal-slider{
+    padding: 0;
+    .slider-big{
+      .product-slide{
+        height: 168px;
+        padding: 32px 16px;
+        img{
+          height: 104px;
+        }
+      }
+    }
+  }
+}
+
+
+
+// * pagination
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  &__btn{
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    &--active{
+      color: $white !important;
+      background-color: $primary-dark !important;
+      border-color: $primary-dark !important;
+      @media screen and (min-width: 992px) {
+        &:hover{
+          background-color: $primary !important;
+          border-color: $primary !important;
+        }
+      }
+    }
+  }
 }

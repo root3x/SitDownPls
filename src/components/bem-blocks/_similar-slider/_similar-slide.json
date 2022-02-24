@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Диван велюровый",
+    "model": "“R-85”",
+    "price": "34 990",
+    "rating": "4.5",
+    "imgsrc": "img/category/sofa/r-85",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  },
+  {
+    "name": "Диван флоковый",
+    "model": "“H-58”",
+    "price": "23 990",
+    "rating": "4.6",
+    "imgsrc": "img/category/sofa/h-58",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  },
+  {
+    "name": "Диван велюровый",
+    "model": "“S-44”",
+    "price": "19 990",
+    "rating": "4.5",
+    "imgsrc": "img/category/sofa/s-44",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  },
+  {
+    "name": "Диван шиниловый",
+    "model": "“V-43”",
+    "price": "19 990",
+    "rating": "4.8",
+    "imgsrc": "img/category/sofa/v-43",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  },
+  {
+    "name": "Диван из шинила",
+    "model": "“W-95”",
+    "price": "22 990",
+    "rating": "4.8",
+    "imgsrc": "img/category/sofa/w-95",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  },
+  {
+    "name": "Диван флоковый",
+    "model": "“G-41”",
+    "price": "17 990",
+    "rating": "4.8",
+    "imgsrc": "img/category/sofa/g-41",
+    "imgsrc-bone": "",
+    "link-to": "#",
+    "btn-text": "Купить"
+  }
+]

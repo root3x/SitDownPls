@@ -1,0 +1,26 @@
+<section class="section similar">
+  <div class="container">
+    <div class="swiper similar__slider">
+      <div class="similar__top slider-top">
+        <h3 class="section__title similar__title h3">
+          Похожие товары
+        </h3>
+        <div class="swiper-navigation similar__navigation slider-nav" data-da=".similar__slider,480,3">
+          <button class="btn btn-circle btn-circle--prev" aria-label="Предыдущие товары">
+            <svg class="arrow">
+              <use xlink:href="@@webRoot/img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+          <button class="btn btn-circle btn-circle--next" aria-label="Следующие товары">
+            <svg class="arrow">
+              <use xlink:href="@@webRoot/img/sprite.svg#sprite--slider-arrow" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="swiper-wrapper similar__wrapper">
+        @@loop('_similar-slide.html', 'components/bem-blocks/_similar-slider/_similar-slide.json')
+      </div>
+    </div>
+  </div>
+</section>

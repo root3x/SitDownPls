@@ -56,6 +56,11 @@
       }
     }
   }
+  &__item{
+    max-width: 150px;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
   &__link{
     &.link--light{
       padding: 5px 0;

@@ -1,0 +1,224 @@
+<section class="section product-card">
+  <div class="container">
+    <div class="product-card__wrapper">
+      <!-- <div class="product-card__slider"> -->
+        <div class="swiper slider-big">
+          <div class="swiper-wrapper slider-big__wrapper">
+            @@loop('@@webRoot/src/catalog/sofa/flat/d-31/_slide.html', '/catalog/sofa/flat/d-31/_slide.json')
+          </div>
+        </div>
+        <div class="swiper slider-thumbs">
+          <div class="swiper-navigation slider-thumbs__navigation slider-nav">
+            <button class="btn btn-circle btn-circle--prev" aria-label="Предыдущие товары">
+              <svg class="arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--slider-arrow" />
+              </svg>
+            </button>
+            <button class="btn btn-circle btn-circle--next" aria-label="Следующие товары">
+              <svg class="arrow">
+                <use xlink:href="@@webRoot/img/sprite.svg#sprite--slider-arrow" />
+              </svg>
+            </button>
+          </div>
+          <div class="swiper-wrapper slider-thumbs__wrapper">
+            @@loop('@@webRoot/src/catalog/sofa/flat/d-31/_slide.html', '/catalog/sofa/flat/d-31/_slide.json')
+          </div>
+        </div>
+      <!-- </div> -->
+      <div class="product-card__info">
+        <span class="rating --svg__rating" data-rating="@@rating">
+        </span>
+        <h4 class="h4 product-card__name">
+          @@name @@model
+        </h4>
+        <p class="text-mini product-card__subname">
+          @@subname
+        </p>
+        <h5 class="price--product product-card__price">
+          @@price руб
+        </h5>
+        <div class="product-card__btns">
+          <button id="modal-call" class="btn --primary product-card__btn-big">
+            @@btn-text
+          </button>
+          <button class="link link--primary product-card__btn-light">
+            @@to-cart
+          </button>
+        </div>
+      </div>
+      <div class="product-card__descr">
+        <h5 class="h5 product-card__descr-title">
+          @@descr-title
+        </h5>
+        <p class="text product-card__descr-text">
+          @@descr
+        </p>
+        <div class="product-card__bones">
+          <picture class="picture">
+            <source data-srcset="@@webRoot/@@imgsrc-bone-1.webp">
+            <img class="lazyload" data-src="@@webRoot/@@imgsrc-bone-1.png" alt="@@name @@model">
+          </picture>
+          <picture class="picture">
+            <source data-srcset="@@webRoot/@@imgsrc-bone-2.webp">
+            <img class="lazyload" data-src="@@webRoot/@@imgsrc-bone-2.png" alt="@@name @@model">
+          </picture>
+        </div>
+      </div>
+      <div class="product-card__options">
+        <table class="options">
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">Гарантия</span>
+            </td>
+            <td class="options__val">
+              @@garanty
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Артикул
+              </span>
+            </td>
+            <td class="options__val">
+              @@articul
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Длина
+              </span>
+            </td>
+            <td class="options__val">
+              @@x
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Высота
+              </span>
+            </td>
+            <td class="options__val">
+              @@y
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Глубина
+              </span>
+            </td>
+            <td class="options__val">
+              @@z
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Спальное место
+              </span>
+            </td>
+            <td class="options__val">
+              @@size
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Высота посадки
+              </span>
+            </td>
+            <td class="options__val">
+              @@height
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Механизм
+              </span>
+            </td>
+            <td class="options__val">
+              @@gear
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Тип обивки
+              </span>
+            </td>
+            <td class="options__val">
+              @@upholstery
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Цвет
+              </span>
+            </td>
+            <td class="options__val">
+              @@color
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Наполнитель
+              </span>
+            </td>
+            <td class="options__val">
+              @@filler
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Материал каркаса
+              </span>
+            </td>
+            <td class="options__val">
+              @@frame
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Количество мест
+              </span>
+            </td>
+            <td class="options__val">
+              @@seats
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Категория
+              </span>
+            </td>
+            <td class="options__val">
+              @@category
+            </td>
+          </tr>
+          <tr class="options__row">
+            <td class="options__def text-mini">
+              <span class="options__def-text">
+                Возврат
+              </span>
+            </td>
+            <td class="options__val">
+              @@return
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+@@include('@@webRoot/src/components/bem-blocks/_modal-form/_modal.html')
+@@include('@@webRoot/src/components/bem-blocks/_modal-form/_modal-thanks.html')
+@@include('@@webRoot/src/components/bem-blocks/_modal-form/_modal-slider.html')

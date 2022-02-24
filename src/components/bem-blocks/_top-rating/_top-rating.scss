@@ -54,6 +54,12 @@
     &__wrapper{
       grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     }
+    .picture{
+      img{
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -85,9 +91,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .toprating{
-    .card-rating{
-      padding: 16px;
-    }
+  .card-rating{
+    padding: 16px;
   }
 }
