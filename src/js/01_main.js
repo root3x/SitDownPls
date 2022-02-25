@@ -544,15 +544,15 @@ function thumbsModal(){
   })
 }
 
-sliderBig.addEventListener('click', function() {
+// sliderBig.addEventListener('click', function() {
 
-  slideModal.classList.add('modal-overlay--active')
-  slideModalWindow.classList.add('modal-window--active')
-  document.querySelector('body').classList.add('hidden')
+//   slideModal.classList.add('modal-overlay--active')
+//   slideModalWindow.classList.add('modal-window--active')
+//   document.querySelector('body').classList.add('hidden')
 
-  replace()
+//   replace()
 
-})
+// })
 
 
 
